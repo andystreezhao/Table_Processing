@@ -84,15 +84,12 @@ s = full_data3.investment.isin(
     ['Direct investment assets', 'Net international investment position of direct   inventment',
      'Direct investment liabilities'])
 
-
 full_data3['investment'] = s
 for b in range(1, len(full_data3)):
-    cc = full_data3.iloc[[b-1],[3]]
-    # if cc == True:
+    cc = full_data3.iloc[[b - 1], [3]].values.item(0)
+
     print(type(cc))
-
-
-
+    print(cc)
 
 # full_data3['investment'].loc(full_data3['investment']).isin(
 #     [' Direct investment assets', ' Net international investment position of direct   inventment',
